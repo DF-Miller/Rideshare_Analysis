@@ -109,5 +109,12 @@ Data Source: https://www.kaggle.com/datasets/brllrb/uber-and-lyft-dataset-boston
 Updated rideshare database schema is 264.23MB
 
 ### Data Cleaning
+* *fact_rides* table: Dropped all values in fact_rides with NULL pricing values
+  * This analysis focuses on price and how different variables affect it
+    * Dropping this allowed me to drop 55K rows from the table that would have had no use in analysis
+  * *short_summary* column: The values in this column contained leading and trailing spaces, making filtering on the values within this column difficult. I updated the column using the TRIM function in SQL.
+    * Discovered using the LENGTH function in SQL after WHERE filtering was not working properly with this column 
+* *dim_products* table: Dropped the Taxi product row
+  * All the rows with NULL pricing values that were dropped were Taxis ordered through uber. There for this row was unnecessary.
 
 
