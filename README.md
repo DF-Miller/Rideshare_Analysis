@@ -109,33 +109,45 @@ Data Source: https://www.kaggle.com/datasets/brllrb/uber-and-lyft-dataset-boston
 Updated rideshare database schema is 264.23MB
 
 ### Data Cleaning
-* *fact_rides* table: Dropped all values in fact_rides with NULL pricing values
-  * This analysis focuses on price and how different variables affect it
-    * Dropping this allowed me to drop 55K rows from the table that would have had no use in analysis
+* *fact_rides* table: Dropped all values in fact_rides with NULL pricing values.
+  * This analysis focuses on price and how different variables affect it.
+    * Dropping this allowed me to drop 55K rows from the table that would have had no use in analysis.
   * *short_summary* column: The values in this column contained leading and trailing spaces, making filtering on the values within this column difficult. I updated the column using the TRIM function in SQL.
-    * Discovered using the LENGTH function in SQL after WHERE filtering was not working properly with this column 
-* *dim_products* table: Dropped the Taxi product row
+    * Discovered using the LENGTH function in SQL after WHERE filtering was not working properly with this column. 
+* *dim_products* table: Dropped the Taxi product row.
   * All the rows with NULL pricing values that were dropped were Taxis ordered through uber. There for this row was unnecessary.
 
 ### Data Analysis
 * Average Price Per Product
-  * The most expensive product is Lyft Lux Black XL, averaging $32.32 per ride
-     * This is followed by Uber Black SUV at $30.29, and then Lyft Lux black at $23.06
-     * The cheapest option is Lyft Shared, averaging $6.03 per ride. Followed by UberPool at $8.75 a ride
+  * The most expensive product is Lyft Lux Black XL, averaging $32.32 per ride.
+     * This is followed by Uber Black SUV at $30.29, and then Lyft Lux black at $23.06.
+     * The cheapest option is Lyft Shared, averaging $6.03 per ride. Followed by UberPool at $8.75 a ride.
        
  ![](pics/avg%20cost%20per%20ride%20type.png)
 
 
 * Location
-  * Boston University is the most expensive place to order an Uber to or from, averaging $18.85 per ride
-    * Followed by Fenway ($18.38) and then the Financial District ($18.18)
-    * Back Bay has the highest average surge multiplier at just below 3%
+  * Boston University is the most expensive place to order an Uber to or from, averaging $18.85 per ride.
+    * Followed by Fenway ($18.38) and then the Financial District ($18.18).
+    * Back Bay has the highest average surge multiplier at just below 3%.
   * The Financial District Is the most popular drop-off and pick-up site, followed by Back Bay, and the Theatre District.
 -- Pricture
 
-  * Distance Pricing
+* Distance Pricing
     * For every addition mile of a ride, the average price increase is $2.14. For every 10th of a mile, the cost is $0.23.
-      * The everage price per addition mile for Lyft's is $3.53, while for Uber it is $2.18
+      * The everage price per addition mile for Lyft's is $3.53, while for Uber it is $2.18.
      
-   -- Picture                    
+   -- Picture
 
+* Weather
+   * Precipitation influences ride prices. Looking at the average cost of rides for all different weather conditions, the three most expensive conditions to get a ride in all involve precipitation.
+   * The Price of getting a ride increases in 9 of the 12 locations when it is drizzling, lighting raining, or raining.
+      * The biggest price increase is in the financial district where prices increase by almost 3% or 53 cents per ride.
+      * The average price of a ride increases about 9 cents when there is some form of rain.
+      * Uber increases their prices more than Lyft. Uber prices jump by 11 cents, while Lyft price increase by 2 cents
+  * Temperature does not appear to affect ride prices. There are no clear trends in price changes as temperature falls. Looking at average ride costs for every 5-degree change in temperature, ride prices fluctuate by only a few cents in either direction, seemingly unaffected by outside temperature. Prices when the temperature is around 20 degrees are about 9 cents higher than when it is around 55 degrees, but prices when it is 25 degrees are actually about 5 cents lower than when it is 55 degrees. The percentage change across 5-degree temperature groups shows no consistent trend in price increases as temperatures drop.
+  * Visibility also does not appear to affect ride prices. There is no obvious trend in price change as visibility decreases. When visibility is grouped in 1-mile increments (Visivilty is the distance in miles a person can clearly see horizontally), the percentage change in pricing appears random, showing both increases and decreases in price as visibility worsens. Prices when visibility is limited to 1 mile are nearly 2 cents cheaper than when visibility is 10 miles.
+  -- Pictures 
+* Time
+   * There is no time period of the day where rides are significantly more expensive (ignoring the surge multiplier). Ride prices are not affected by it being morning, afternoon, or night.
+   * Sunset and Sunrise do not have any effect on the cost of a ride. If you get a ride before sunrise or after sunset there is no difference in price if you were to get a ride while the sun was still out.
