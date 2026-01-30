@@ -117,4 +117,10 @@ Updated rideshare database schema is 264.23MB
 * *dim_products* table: Dropped the Taxi product row
   * All the rows with NULL pricing values that were dropped were Taxis ordered through uber. There for this row was unnecessary.
 
+### Data Analysis
+* Average Price Per Product
+  * The most expensive product is Lyft Lux Black XL, averaging $32.32 per ride
+     * This is followed by Uber Black SUV at $30.29, and then Lyft Lux black at $23.06
+     * The cheapest option is Lyft Shared, averaging $6.03 per ride. Followed by UberPool at $8.75 a ride.
+
 
