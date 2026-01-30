@@ -121,6 +121,21 @@ Updated rideshare database schema is 264.23MB
 * Average Price Per Product
   * The most expensive product is Lyft Lux Black XL, averaging $32.32 per ride
      * This is followed by Uber Black SUV at $30.29, and then Lyft Lux black at $23.06
-     * The cheapest option is Lyft Shared, averaging $6.03 per ride. Followed by UberPool at $8.75 a ride.
+     * The cheapest option is Lyft Shared, averaging $6.03 per ride. Followed by UberPool at $8.75 a ride
+       
+ ![](pics/avg%20cost%20per%20ride%20type.png)
 
+
+* Location
+  * Boston University is the most expensive place to order an Uber to or from, averaging $18.85 per ride
+    * Followed by Fenway ($18.38) and then the Financial District ($18.18)
+    * Back Bay has the highest average surge multiplier at just below 3%
+  * The Financial District Is the most popular drop-off and pick-up site, followed by Back Bay, and the Theatre District.
+-- Pricture
+
+  * Distance Pricing
+    * For every addition mile of a ride, the average price increase is $2.14. For every 10th of a mile, the cost is $0.23.
+      * The everage price per addition mile for Lyft's is $3.53, while for Uber it is $2.18
+     
+   -- Picture                    
 
