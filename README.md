@@ -133,7 +133,7 @@ Updated rideshare database schema is 264.23MB
   * The Financial District Is the most popular drop-off and pick-up site, followed by Back Bay, and the Theatre District.
 -- Pricture
 
-![](pics/avg%20price%20per%20location.png)
+![](pics/Avg%20price%20per%20location.png)
 
 
 * Distance Pricing
