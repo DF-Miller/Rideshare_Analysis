@@ -150,7 +150,13 @@ Updated rideshare database schema is 264.23MB
       * Uber increases their prices more than Lyft. Uber prices jump by 11 cents, while Lyft price increase by 2 cents
   * Temperature does not appear to affect ride prices. There are no clear trends in price changes as temperature falls. Looking at average ride costs for every 5-degree change in temperature, ride prices fluctuate by only a few cents in either direction, seemingly unaffected by outside temperature. Prices when the temperature is around 20 degrees are about 9 cents higher than when it is around 55 degrees, but prices when it is 25 degrees are actually about 5 cents lower than when it is 55 degrees. The percentage change across 5-degree temperature groups shows no consistent trend in price increases as temperatures drop.
   * Visibility also does not appear to affect ride prices, unless there is under 0.5 miles of visibility. When Visibility falls under 0.5 miles, the average cost of a ride increases by 50 cents. Aside from this, there is no obvious trend in price change as visibility decreases. When visibility is grouped in 1-mile increments (Visivilty is the distance in miles a person can clearly see horizontally), the percentage change in pricing appears random, showing both increases and decreases in price as visibility worsens. Prices when visibility is limited to 1 mile are nearly 2 cents cheaper than when visibility is 10 miles.
-  -- Pictures 
+
+
+![](pics/price%20change%20-%20Precipitation%20v%20clear.png)         ![](pics/location%20price%20increase%20precipitation%20v%20clear.png)
+![](pics/avg%20price%20by%20miles%20of%20viz.png)
+
+
+
 * Time
    * There is no time period of the day where rides are significantly more expensive (ignoring the surge multiplier). Ride prices are not affected by it being morning, afternoon, or night.
    * Sunset and Sunrise do not have any effect on the cost of a ride. If you get a ride before sunrise or after sunset there is no difference in price if you were to get a ride while the sun was still out.
