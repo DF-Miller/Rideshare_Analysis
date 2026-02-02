@@ -140,7 +140,7 @@ Updated rideshare database schema is 264.23MB
     * For every addition mile of a ride, the average price increase is $2.14. For every 10th of a mile, the cost is $0.23.
       * The everage price per addition mile for Lyft's is $3.53, while for Uber it is $2.18.
      
-   -- Picture
+   ![](pics/avg%20cost%20per%20ride%20distance.png)
 
 * Weather
    * Precipitation slightly influences ride prices. Looking at the average cost of rides for all different weather conditions, all weather summaries that include current precipitation or overcast are more expensive than when it is clear outside or when there is the potential for rain.
