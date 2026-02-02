@@ -133,6 +133,9 @@ Updated rideshare database schema is 264.23MB
   * The Financial District Is the most popular drop-off and pick-up site, followed by Back Bay, and the Theatre District.
 -- Pricture
 
+![](pics/avg%20price%20per%20location.png)
+
+
 * Distance Pricing
     * For every addition mile of a ride, the average price increase is $2.14. For every 10th of a mile, the cost is $0.23.
       * The everage price per addition mile for Lyft's is $3.53, while for Uber it is $2.18.
