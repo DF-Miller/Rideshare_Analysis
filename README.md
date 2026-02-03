@@ -1,7 +1,7 @@
 # Rideshare Analysis
 ## Uber and Lyft Analysis for Customers
 
-This data is from a 1 table dataset containing Uber and Lyft pricing information. The table contains data from November and December 2018 uber and Lyft rides in Boston, MA. USA. The *raw file columns and descriptions* section describe the original Kaggle dataset before cleaning. Some of these columns could be used for future analysis. The *Database Cleanup* section details the size of the original table and details how it was converted into a STAR schema. The *Data Analysis* section summarizes key insights.
+This data is from a 1 table dataset containing Uber and Lyft pricing information. The table contains data from November and December 2018 Uber and Lyft rides in Boston, MA. USA. The *raw file columns and descriptions* section describe the original Kaggle dataset before cleaning. Some of these columns could be used for future analysis. The *Database Cleanup* section details the size of the original table and details how it was converted into a STAR schema. The *Data Analysis* section summarizes key insights.
 
 Data Source: https://www.kaggle.com/datasets/brllrb/uber-and-lyft-dataset-boston-ma
 
@@ -120,7 +120,7 @@ Updated rideshare database schema is 264.23MB
 ### Data Analysis
 * Average Price Per Product
   * The most expensive product is Lyft Lux Black XL, averaging $32.32 per ride.
-     * This is followed by Uber Black SUV at $30.29, and then Lyft Lux black at $23.06.
+     * This is followed by Uber Black SUV ($30.29), and then Lyft Lux black ($23.06).
      * The cheapest option is Lyft Shared, averaging $6.03 per ride. Followed by UberPool at $8.75 a ride.
        
  ![](pics/avg%20cost%20per%20ride%20type.png)
@@ -131,7 +131,7 @@ Updated rideshare database schema is 264.23MB
     * Followed by Fenway ($18.38) and then the Financial District ($18.18).
     * Back Bay has the highest average surge multiplier at just below 3%.
   * The Financial District Is the most popular drop-off and pick-up site, followed by Back Bay, and the Theatre District.
--- Pricture
+
 
 ![](pics/Avg%20price%20per%20location.png)
 
@@ -143,15 +143,16 @@ Updated rideshare database schema is 264.23MB
    ![](pics/avg%20cost%20per%20ride%20distance.png)
 
 * Weather
-   * Precipitation slightly influences ride prices. Looking at the average cost of rides for all different weather conditions, all weather summaries that include current precipitation or overcast are more expensive than when it is clear outside or when there is the potential for rain.
-   * The Price of getting a ride increases in 7 of the 12 locations when it is drizzling, lighting raining, or raining.
+   * Precipitation and overast slightly influences ride prices. The average price of rides durring all weather summaries (short_summary column) that include current precipitation or overcast are more expensive than when it is clear outside or when there is the potential for rain.
+   * The Price of getting a ride increases in 7 of the 12 locations when it is drizzling, lightly raining, or raining.
       * The biggest price increase is in the financial district where prices increase by almost 1.5% or 26 cents per ride.
-      * The average price of a ride increases about 9 cents when there is some form of rain.
+      * The average price of a ride increases about 9 cents when there is any form of rain.
       * Uber increases their prices more than Lyft. Uber prices jump by 11 cents, while Lyft price increase by 2 cents
+        
         ![](pics/price%20change%20-%20Precipitation%20v%20clear.png)         ![](pics/location%20price%20increase%20precipitation%20v%20clear.png)
         
-  * Temperature does not appear to affect ride prices. There are no clear trends in price changes as temperature falls. Looking at average ride costs for every 5-degree change in temperature, ride prices fluctuate by only a few cents in either direction, seemingly unaffected by outside temperature. Prices when the temperature is around 20 degrees are about 9 cents higher than when it is around 55 degrees, but prices when it is 25 degrees are actually about 5 cents lower than when it is 55 degrees. The percentage change across 5-degree temperature groups shows no consistent trend in price increases as temperatures drop.
-  * Visibility also does not appear to affect ride prices, unless there is under 0.5 miles of visibility. When Visibility falls under 0.5 miles, the average cost of a ride increases by 50 cents. Aside from this, there is no obvious trend in price change as visibility decreases. When visibility is grouped in 1-mile increments (Visivilty is the distance in miles a person can clearly see horizontally), the percentage change in pricing appears random, showing both increases and decreases in price as visibility worsens. Prices when visibility is limited to 1 mile are nearly 2 cents cheaper than when visibility is 10 miles.
+  * Temperature does not appear to affect ride prices, as there are no clear trends in price changes as temperature falls. When looking at average ride costs for every 5-degree change in temperature, ride prices fluctuate by only a few cents in either direction, seemingly unaffected by outside temperature. Prices when the temperature is around 20 degrees are about 9 cents higher than when it is around 55 degrees, but prices when it is 25 degrees are actually about 5 cents lower than when it is 55 degrees. The percentage change across 5-degree temperature groups shows no consistent trend in price increases as temperatures drop.
+  * Visibility also does not appear to affect ride prices, unless visibility falls below 0.5 miles. When Visibility falls under 0.5 miles, the average cost of a ride increases by 50 cents. Aside from this, there is no obvious trend in price changes as visibility decreases. When visibility is grouped in 1-mile increments (visibility is the distance in miles a person can clearly see horizontally), the percentage change in pricing appears random, showing both increases and decreases in price as visibility worsens. Prices when visibility is limited to 1 mile are nearly 2 cents cheaper than when visibility is 10 miles.
 
 
 ![](pics/avg%20price%20by%20miles%20of%20viz.png)
